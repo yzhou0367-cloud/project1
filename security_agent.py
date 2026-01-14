@@ -67,7 +67,7 @@ class SecurityFixAgent:
         
         tool_calls = 0
 
-        # 5. Round 2 工具调用 (如果需要)
+        # 5. Round 2 工具调用 
         if r1.get("need_more_info"):
             tool_req = r1.get("tool_request", {})
             tool_name = tool_req.get("type")
@@ -197,4 +197,5 @@ Does this commit fix **{cve}** specifically?
    - Changes in test files, documentation, or unrelated modules
 
 4. If diff is truncated/unclear about the fix mechanism, request tool to see full function.
+
 """
